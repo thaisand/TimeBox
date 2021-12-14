@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timebox</title>
+        <link rel="stylesheet" href="rotina.css" />
+        <script src="rotina.js" defer></script>
+        <link
+            rel="shortcut icon"
+            href="assets/favicon.svg"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div id="menu">
+                <div class="content">
+                    <h1
+                        style="
+                            border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+                            width: 100%;
+                        "
+                    >
+                        Resumo
+                    </h1>
+                    <section id="resumo">
+                        <div class="pendentes"></div>
+                    </section>
+                </div>
+            </div>
+            <div id="main">
+                <header>
+                    <div id="menu-button" class="icon-button">
+                        keyboard_double_arrow_right
+                    </div>
+                    <div class="logo">
+                        <a href="./inicio.html">
+                            <img src="assets/logo.svg" alt="Timebox" />
+                        </a>
+                    </div>
+                    <div class="header-info"></div>
+                    <div id="notification-area">
+                        <div id="notification-btn" class="icon-button">
+                            notifications
+                        </div>
+                        <div id="notificationPopup">
+                            <div class="notifications">
+                                <div class="notification-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="login-btn" href="login.html">
+                        <div class="button">Login</div>
+                    </a>
+                </header>
+
+                <section id="rotina">
+                    <textarea
+                        type="text"
+                        name="title"
+                        id="title"
+                        placeholder="Título..."
+                    ></textarea>
+                    <div class="editavel"></div>
+                    <div class="novo-campo" id="novo-campo-texto">
+                        <span>add</span> Criar subtítulo
+                    </div>
+                    <div class="novo-campo" id="novo-campo-task">
+                        <span>add</span> Nova tarefa
+                    </div>
+                    <div class="novo-campo" id="delete-rotina">
+                        <span>delete</span> Excluir rotina
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script></script>
+    </body>
+</html>

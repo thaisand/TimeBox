@@ -1,0 +1,478 @@
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v92/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+        format("woff2");
+}
+@font-face {
+    font-family: "Material Icons Outlined";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v81/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2)
+        format("woff2");
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.button span {
+    font-family: "Material Icons";
+    user-select: none;
+    font-size: 2rem;
+    text-transform: lowercase;
+    margin-right: 1rem;
+}
+.icon-button {
+    font-family: "Material Icons";
+    cursor: pointer;
+    user-select: none;
+    font-size: 2rem;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    min-height: 5rem;
+}
+
+#menu {
+    display: flex;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    align-items: center;
+    width: 100%;
+}
+.content h1 {
+    text-align: center;
+}
+#menu-button {
+    font-family: "Material Icons Outlined";
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: margin-left 0.5s;
+}
+
+.logo {
+    flex-grow: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.logo img {
+    width: 150px;
+}
+
+section {
+    padding: 1rem 3rem;
+}
+#rotina {
+    max-width: 1600px;
+}
+
+#rotina textarea {
+    resize: none;
+    overflow: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+#rotina #title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-bottom: none;
+}
+#rotina #line {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+#rotina .novo-campo {
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.5;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    transition: 0.2s;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+#rotina .novo-campo span {
+    font-family: "Material Icons";
+}
+#rotina .novo-campo:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.popup-content {
+    background-color: #f1f1f1;
+    max-height: 90%;
+    max-width: 80%;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.popup-content #info {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.popup-content #info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.popup-content #title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-bottom: none;
+    resize: none;
+    display: flex;
+}
+span.icon {
+    font-family: "Material Icons";
+    font-size: 1.5rem;
+    top: 5px;
+    position: relative;
+    margin-right: 0.5rem;
+}
+.popup-content .info-column {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+}
+.popup-content .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.popup-content #buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+}
+.popup-content input {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.popup-content textarea {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    resize: none;
+}
+.popup-content select {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.popup-content #campo-repetir input,
+.popup-content #campo-tempo-limite input,
+.popup-content #campo-progress input {
+    width: 50px;
+}
+.popup-content input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.popup-content #buttons div:nth-child(1) {
+    background-color: rgb(164, 237, 255);
+}
+#notification-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#notificationPopup {
+    position: absolute;
+    align-self: center;
+    top: 125%;
+}
+.notifications {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    max-width: 300px;
+    z-index: 1;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.notifications.opened {
+    opacity: 1;
+    user-select: auto;
+}
+.notification-content {
+    background-color: #f1f1f1;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-content:empty::after {
+    content: "Nenhuma notificação";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+.notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+.notification-item:hover {
+    background-color: #cfcfcf;
+}
+.notification-item .notification-text {
+    min-width: 150px;
+}
+.task {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.task .check-area label {
+    font-weight: 700;
+}
+.task .check-area .description-area {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.task .date-area {
+    font-size: 0.8rem;
+    align-self: flex-start;
+}
+.task .date-area .icon {
+    font-size: 1rem;
+    margin-right: 0;
+    top: 2px;
+    align-self: flex-start;
+}
+#resumo {
+    padding: 1rem;
+}
+.user-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.tarefa {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.tarefa .tarefa-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.tarefa .tarefa-info-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.tarefa .tarefa-info-data {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+.tarefa .tarefa-info-data .icon {
+    font-size: 1rem;
+    position: static;
+}
+.tarefa .tarefa-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.tarefa-notificada {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+.tarefa-notificada::after {
+    content: "! Atrasada";
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: red;
+}
+.tarefa .tarefa-main .icon-button {
+    font-size: 1.2rem;
+}
+#delete-rotina {
+    color: red;
+}
+@media (max-width: 689px) {
+    #menu-button {
+        display: none;
+    }
+    #menu {
+        display: none;
+    }
+    #main {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 561px) {
+    .popup-content .info-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+    }
+}
+@media (max-width: 425px) {
+    * {
+        font-size: 0.8rem;
+    }
+    .logo img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        object-position: left;
+    }
+}
+
+/* editar */
+.popup {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.popup-content {
+    background-color: #f1f1f1;
+    max-height: 90%;
+    max-width: 80%;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.popup-content #buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.popup input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}

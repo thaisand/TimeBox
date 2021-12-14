@@ -1,0 +1,287 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #f1f1f1;
+    color: black;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.main {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.titulo {
+    font-family: OCR A Std, monospace;
+}
+
+#suasRotinas {
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: flex-start;
+    display: block;
+}
+
+#suasRotinas.fechar {
+    display: none !important;
+}
+
+#listarotinas {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 15px;
+    margin: auto;
+}
+
+#jansuasrotinas {
+    font-size: 50px;
+}
+
+.fa-cube {
+    font-size: 30px;
+}
+
+.botaorotina {
+    background-color: #d400ff73;
+    border-radius: 15px;
+    border: none;
+    height: 60px;
+    width: 230px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#divRotinas {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+#novaRotina {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background-color: #d8d8d8;
+    border-radius: 13px;
+    border: none;
+    height: 60px;
+    width: 230px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#inputrotina {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    border: none;
+    margin-left: 32px;
+    width: 140px;
+}
+
+#addRotina {
+    background-color: transparent;
+    border: none;
+}
+
+#botaofechar {
+    border-radius: 35px;
+    width: 33px;
+    height: 33px;
+    font-size: 20px;
+    background-color: #d400ff73;
+    margin-left: 3px;
+    border: none;
+    float: top;
+    float: right;
+}
+
+#btnfechar {
+    padding-left: 3px;
+}
+
+#tituloRotina {
+    font-size: 40px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#classes {
+    list-style-type: none;
+}
+
+#classe {
+    padding: 10px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+svg {
+    margin-right: 10px;
+}
+
+section {
+    border-radius: 40px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    width: 100%;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+select {
+    margin-left: 15px;
+    background-color: #d8d8d8;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 3px;
+}
+
+form input {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #d8d8d8;
+    border: none;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#inputdate {
+    width: 175px;
+}
+
+#inputtempo {
+    width: 50px;
+}
+
+#inputnovaclasse {
+    outline: none;
+    border: none;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    margin: none;
+}
+
+#titulotarefa {
+    outline: none;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 30px;
+    margin: none;
+}
+
+#criar button {
+    margin-left: 70px;
+    color: gray;
+    border: none;
+    font-size: 23px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.botoes {
+    float: right;
+    outline: none;
+    border: none;
+}
+
+#botaoCancelar {
+    font-weight: 550;
+    color: black;
+    font-style: normal;
+    align-items: center;
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(235, 35, 0, 0.651);
+    border-radius: 5px;
+}
+
+#botaosalvar {
+    background-color: rgba(153, 205, 50, 0.589);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 550;
+    color: black;
+}
+
+#checkbox {
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+#maisUm {
+    border-radius: 8px;
+    border: 2px;
+    border: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 30px;
+    background-color: #d8d8d8;
+    font-size: 80%;
+}
+
+#suasRotinas {
+    background-color: #f1f1f1;
+    display: block;
+}
+
+#suasRotinas.abrir {
+    position: fixed;
+    width: 80%;
+    display: block;
+}
+
+#suasrotinas.fechar {
+    display: none !important;
+}
+
+#janelaRotina {
+    background-color: #f1f1f1;
+    display: none;
+}
+
+#janelaRotina.abrir {
+    width: 100%;
+    background-color: #f1f1f1;
+    display: block !important;
+}
+
+#janelaRotina.fechar {
+    display: none !important;
+}
+
+#editarRotina {
+    display: none;
+}
+
+#editarRotina.abrir {
+    width: 100%;
+    background-color: #f1f1f1;
+    display: block !important;
+}
+
+#editarRotina.fechar {
+    display: none !important;
+}

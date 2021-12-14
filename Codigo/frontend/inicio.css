@@ -1,0 +1,415 @@
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v92/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+        format("woff2");
+}
+@font-face {
+    font-family: "Material Icons Outlined";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v81/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2)
+        format("woff2");
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f1f1f1;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.icon-button {
+    font-family: "Material Icons";
+    cursor: pointer;
+    user-select: none;
+    font-size: 2rem;
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    min-height: 5rem;
+}
+
+#menu {
+    display: flex;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    align-items: center;
+    width: 100%;
+}
+.content h1 {
+    text-align: center;
+}
+#menu-button {
+    font-family: "Material Icons Outlined";
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: margin-left 0.5s;
+}
+
+.logo {
+    flex-grow: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.logo img {
+    width: 150px;
+}
+
+section {
+    padding: 1rem 3rem;
+}
+.rotinas-grid {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.rotina {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(204, 204, 204);
+    border-radius: 1rem;
+    width: 10rem;
+    gap: 1rem;
+    user-select: none;
+    cursor: pointer;
+}
+.rotina .name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+.rotina .icon {
+    font-family: "Material Icons Outlined";
+    font-size: 1.5rem;
+}
+#notification-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#notificationPopup {
+    position: absolute;
+    align-self: center;
+    top: 125%;
+}
+.notifications {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    max-width: 300px;
+    z-index: 1;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.notifications.opened {
+    opacity: 1;
+    user-select: auto;
+}
+.notification-content {
+    background-color: #f1f1f1;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-content:empty::after {
+    content: "Nenhuma notificação";
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+.notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+.notification-item:hover {
+    background-color: #cfcfcf;
+}
+.notification-item .notification-text {
+    min-width: 150px;
+}
+.rel-area {
+    display: flex;
+}
+.rel-area-desc {
+    display: flex;
+    align-items: center;
+}
+.rel-area .graph-area {
+    position: relative;
+}
+.rel-area .graph-area .rotina-graph {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border-radius: 50%;
+    position: absolute;
+}
+.rel-area .subtitle .percentage {
+    display: flex;
+    gap: 0.5rem;
+}
+.rel-area .subtitle {
+    margin-left: 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+span.icon {
+    font-family: "Material Icons Outlined";
+    font-size: 1rem;
+}
+.task {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.task .check-area label {
+    font-weight: 700;
+}
+.task .check-area .description-area {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.task .date-area {
+    font-size: 0.8rem;
+    align-self: flex-start;
+}
+.task .date-area .icon {
+    font-size: 1rem;
+    margin-right: 0;
+    top: 2px;
+    align-self: flex-start;
+}
+#resumo {
+    padding: 1rem;
+}
+.user-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+span {
+    font-family: "Material Icons";
+}
+#listarotinas {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 15px;
+    margin: auto;
+    gap: 2rem;
+}
+#novaRotina {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    background-color: #d8d8d8;
+    border-radius: 13px;
+    border: none;
+    height: 60px;
+    width: 230px;
+    margin-top: 15px;
+}
+#inputrotina {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    border: none;
+    margin-left: 32px;
+    width: 140px;
+}
+.botaorotina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    border-radius: 15px;
+    border: none;
+    height: 60px;
+    width: 230px;
+    margin-top: 15px;
+    gap: 1rem;
+    cursor: pointer;
+}
+#addRotina {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.botaorotina .rotina-title {
+    text-transform: uppercase;
+}
+#grafico {
+    max-width: 33%;
+    max-height: 300px;
+}
+#conquistas .conq-area-stars {
+    display: flex;
+}
+#conquistas .conq-area {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.conq-area-stars .star {
+    font-size: 4rem;
+    font-family: "Material Icons Outlined";
+    color: #919191;
+    user-select: none;
+}
+.conq-area-stars .star.active {
+    color: #ffc107;
+}
+#conquistas .areas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    flex-direction: column;
+}
+@media (max-width: 689px) {
+    #menu-button {
+        display: none;
+    }
+    #menu {
+        display: none;
+    }
+    #main {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 465px) {
+    * {
+        font-size: 0.8rem;
+    }
+    .logo img {
+        width: 25px;
+        height: 25px;
+        object-fit: cover;
+        object-position: left;
+    }
+    .botaorotina {
+        width: 120px;
+    }
+    #novaRotina {
+        width: 120px;
+        padding: 0;
+    }
+    #novaRotina input {
+        max-width: 80%;
+        margin-left: 0;
+    }
+}
+
+/* editar */
+.popup {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.popup-content {
+    background-color: #f1f1f1;
+    max-height: 90%;
+    max-width: 80%;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.popup-content #buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.popup input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
